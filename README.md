@@ -19,6 +19,7 @@ We'll start with the face data creation and saving (or deleting):
      python3 controlPanel.py -h
 
      You will see something like this:
+      ```
        usage: controlPanel.py [-h] [-a] [-d] [-n NAME] [-i IMAGE]
 
         Control panel for face recognition
@@ -30,10 +31,15 @@ We'll start with the face data creation and saving (or deleting):
           -n NAME, --name NAME  The name of the person to add or delete
           -i IMAGE, --image IMAGE
                                 The path of the image of the person to add
+      ```
 
      the syntax is pretty self-explanatory here, so you'll adapt to it pretty fast
-
+      ```
      Here's the example of adding a new facedata from a photo: python controlPanel.py -a -n John -i images/John.jpg
+      ```
+      
+     ```
      Here's its deletion: python controlPanel.py -d -n John
+     ```
 
 # Good luck using it and be free to file any bugs to my email: lvumbapipin@gmail.com
