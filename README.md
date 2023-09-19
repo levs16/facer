@@ -6,18 +6,29 @@ To make it work you have to install cv2 and face_recognition libraries.
 
 Install using requirements.txt:
    1. Open your terminal
-   2. use one of those commands: pip install -r [path to the requirements.txt] or pip3 install -r [path to requirements.txt]
+   2. use one of those commands:
+      ```
+      pip install -r [path to the requirements.txt]
+      ```
+      or
+      ```
+      pip3 install -r [path to requirements.txt]
+      ```
 
 Install all by yourself:
   1. Open your terminal
-  2. pip3 install opencv-python && pip3 install face_recognition
+  2. Use this command:
+     ```
+     pip3 install opencv-python && pip3 install face_recognition
+     ```
 
 # How to use
 
 We'll start with the face data creation and saving (or deleting):
   1. To use the panel, you will need to know some commands. You can see them by calling the help function:
+     ```
      python3 controlPanel.py -h
-
+      ```
      You will see something like this:
       ```
        usage: controlPanel.py [-h] [-a] [-d] [-n NAME] [-i IMAGE]
