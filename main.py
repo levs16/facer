@@ -7,7 +7,7 @@ with open('dataset/faces.json', 'r') as f:
 # start the webcam
 cap = cv2.VideoCapture(0)
 
-# loop while the q is no pressed
+# loop while the q is not pressed
 while True:
     ret, frame = cap.read()
     rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)

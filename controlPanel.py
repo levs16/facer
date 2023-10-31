@@ -1,12 +1,3 @@
-#############FACERPANEL###############
-##   Last change Sep19 2023(1:26PM) ## 
-##   Version: 1.2                   ##
-##   Changelog is at the bottom     ##
-######################################
-# Written on the Sep18 2023(10:43PM) #
-######################################
-
-
 # Imports
 import json, cv2, face_recognition, argparse, os
 
@@ -34,8 +25,9 @@ if file_size == 0:
 with open(json_file, "r") as f:
     face_data = json.load(f)
 
-# check for an argument
-if args.add:
+# function for adding a new face to the JSON file
+def addFace(args):
+    """Add a new face to the JSON file using the name and image arguments"""
     # check for the name and image arguments
     if args.name and args.image:
         # open/read the image and convert it to the RGB scale
@@ -53,9 +45,10 @@ if args.add:
     else:
         print("Please provide a name and an image for adding a new face.")
 
-# look for the delete arg
-if args.delete:
-    # if given
+# function for deleting an existing face from the JSON file
+def deleteFace(args):
+    """Delete an existing face from the JSON file using the name argument"""
+    # check for the name argument
     if args.name:
         # find the name in the json
         for i, person in enumerate(face_data["emp_details"]):
@@ -73,12 +66,8 @@ if args.delete:
     else:
         print("Please provide a name for deleting an existing face.")
 
-
-#####CHANGELOG#######
-
-# ver0.13 - started this changelog. Added json file fixing(if it's empty). Fixed and changed the default path to the faces.json
-# ver0.14 - added some outputs for the program.
-# ver0.5 - changed the version format from G.Ix (where G is the generation(initial) of the program, I is the generation(secondary) and the x is the version of the generation) to G.x(where G is the same, but only the x is now present)
-# ver1.0 - GLOBAL CHANGES. Now program is console-run (using the argparse lib)
-# ver1.1 - fixed the not-working argparsing, where it will output errors to the console insted of working with the args
-# ver1.2 - added the bigger (--example) version of the arguments
+# check for an argument and call the corresponding function
+if args.add:
+    addFace(args)
+if args.delete:
+    deleteFace(args)
