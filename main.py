@@ -28,7 +28,7 @@ while True:
         cv2.putText(frame, name, (left, top - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 0), 2)
 
     # show the window
-    cv2.imshow("Facer (ver.0.4)", frame)
+    cv2.imshow("Facer (ver.0.6)", frame)
 
     # check for s or q input
     key = cv2.waitKey(1) & 0xFF

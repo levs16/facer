@@ -53,18 +53,18 @@ def deleteFace(args):
         # find the name in the json
         for i, person in enumerate(face_data["emp_details"]):
             if person["name"] == args.name:
-                # remove em
-                with open(json_file, "r+") as f:
-                    data = json.load(f)
-                    del data["emp_details"][i]
-                    f.seek(0)
-                    json.dump(data, f)
+                # remove the face data
+                del face_data["emp_details"][i]
+                # write the updated data back to the JSON file
+                with open(json_file, "w") as f:
+                    json.dump(face_data, f)
                 print(f"Successfully deleted {args.name} from the JSON file.")
                 break
         else:
             print(f"No such name {args.name} found in the JSON file.")
     else:
         print("Please provide a name for deleting an existing face.")
+
 
 # check for an argument and call the corresponding function
 if args.add:
