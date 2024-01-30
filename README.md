@@ -55,6 +55,6 @@ We'll start with the face data creation and saving (or deleting):
 # OR! You can use the new GUI Control Panel :3
 # There's one more thing(bugs):
 Known ones are:
-   1. When trying to delete face from the json file using the ``` python controlPanel.py -d -n Example ```, it deletes face that way, so the file breaks and causes errors when trying to add, delete, get help from the controlPanel.py.
+   1. When trying to delete face from the json file using the ``` python controlPanel.py -d -n Example ```, it deletes face that way, so the file breaks and causes errors when trying to add, delete, get help from the controlPanel.py. FIXED✅
 
 # Good luck using it and be free to file any bugs to my email: lvumbapipin@gmail.com
